@@ -10,7 +10,6 @@ export default function Main() {
         <div className="content">
           <Routes>
             <Route exact path="/Characters" element={<Characters />} />.
-
           </Routes>
           <Outlet />
         </div>
