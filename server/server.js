@@ -25,6 +25,7 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const dataRoutes = require("./routes/data");
 
+app.use("/api/users", usersRoutes(db));
 app.use("/api/data", dataRoutes(db));
 
 app.get("/", (req, res) => {

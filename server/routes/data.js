@@ -4,10 +4,10 @@ const axios = require('axios');
 
 module.exports = (db) => {
 
-  // http://localhost:4000/api/data
-  router.get("/", (req, res) => {
+  // http://localhost:4000/api/data/
+  router.get("/:metaDataType", (req, res) => {
 
-    axios.get(`https://open-api.bser.io/v1/data/hash`, {
+    axios.get(`https://open-api.bser.io/v1/data/${req.params.metaDataType}`, {
       headers: {
         "x-api-key": process.env.API_KEY
       }
