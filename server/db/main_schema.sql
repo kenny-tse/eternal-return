@@ -1,0 +1,38 @@
+DROP TABLE IF EXISTS users CASCADE;
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+DROP TABLE IF EXISTS characters CASCADE;
+CREATE TABLE characters (
+  code INTEGER PRIMARY KEY NOT NULL,
+  name VARCHAR(255),
+  maxHp DOUBLE PRECISION,
+  maxSp DOUBLE PRECISION,
+  strLearnStartSkill VARCHAR(255),
+  initExtraPoint DOUBLE PRECISION,
+  maxExtraPoint DOUBLE PRECISION,
+  attackPower DOUBLE PRECISION,
+  defense DOUBLE PRECISION,
+  criticalStrikeChance DOUBLE PRECISION,
+  hpRegen DOUBLE PRECISION,
+  spRegen DOUBLE PRECISION,
+  attackSpeed DOUBLE PRECISION,
+  attackSpeedLimit DOUBLE PRECISION,
+  attackSpeedMin DOUBLE PRECISION,
+  moveSpeed DOUBLE PRECISION,
+  sightRange DOUBLE PRECISION,
+  radius DOUBLE PRECISION,
+  pathingRadius DOUBLE PRECISION,
+  uiHeight DOUBLE PRECISION,
+  resource VARCHAR(255),
+  maxHpLevel DOUBLE PRECISION,
+  maxSpLevel DOUBLE PRECISION,
+  attackPowerLevel DOUBLE PRECISION,
+  defenseLevel DOUBLE PRECISION,
+  criticalChanceLevel DOUBLE PRECISION,
+  hpRegenLevel DOUBLE PRECISION,
+  spRegenLevel DOUBLE PRECISION,
+  attackSpeedLevel DOUBLE PRECISION,
+  moveSpeedLevel DOUBLE PRECISION
+);

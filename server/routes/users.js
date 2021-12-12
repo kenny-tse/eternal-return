@@ -68,5 +68,17 @@ module.exports = (db) => {
     })
   });
 
+  // test db connection
+  // http://localhost:4000/api/users/test
+  router.get("/test", (req, res) => {
+
+    db.getUserById()
+      .then((result) => {
+        res.send(result)
+      }).catch((error) => {
+        console.log(error)
+      })
+  });
+
   return router;
 };

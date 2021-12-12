@@ -10,11 +10,11 @@ const morgan = require("morgan");
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
 
-const { getUserById } = require("./db/database");
+const { getUserById, addCharacter, patchCharacterLevelUps, deleteCharacterData } = require("./db/database");
 
 const pool = new Pool(dbParams);
 pool.connect();
-const db = { getUserById };
+const db = { getUserById, addCharacter, patchCharacterLevelUps, deleteCharacterData };
 
 app.use(morgan("dev"));
 
